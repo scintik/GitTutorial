@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/license-GPL-blue) ![](https://img.shields.io/badge/Language-ITA-yellow)
+![](https://img.shields.io/badge/license-GPL-blue) ![](https://img.shields.io/badge/language-ITA-yellow)
 # GitTutorial
 ## per tutti ma sopratutto per me! :wink:
 Appunti su Git / GitHub / Visual Code
