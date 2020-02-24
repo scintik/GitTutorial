@@ -8,7 +8,9 @@ Tutti i comandi saranno dati da terminale (prompt dei comandi, shell, o altro mo
 
 Quando stiamo per iniziaiare u nnuovo progetto sul proprio computer locale che si vorrà poi esportare, bisogna creare un repository ('repo' in gergo).
 Una volta che ci saremo posizionati nella cartella con il nome del del progetto, daremo il comando:
-![](https://placehold.it/15/000000/1589F0?text='git init')
+```bash
+git init
+```
 Questo comando genera una cartella nascosta .git al cui interno ci sono tutti i file necessari a git per sapere come procedere nei passi successivi.
 
 ### Aggiungere un nuovo file al repo
