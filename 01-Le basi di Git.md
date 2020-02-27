@@ -40,7 +40,6 @@ Untracked files:
         nuovofile.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
-
 ```
 
 In pratica ci dice che si è accorto che esiste un nuovo file di nome *nuovofile.txt*, ma a meno di usare il comando **git add** non succederà niente.
