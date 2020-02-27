@@ -60,15 +60,17 @@ The file will have its original line endings in your working directory
 Lo staging è una fase temporanea da cui devono passare i nuovi file prima di essere elaborati da git, questo perchè potrebbe volere processare solo alcuni file) e altri mantenerli solo nel nostro repository locale come appunti o altro).
 
 Avendo un solo file per il momento il comando **`git add`** avrà preparato quello, quindi riesequendo il comando **`git status`** adesso otterremo:
+```console
 On branch master
 Your branch is up to date with 'origin/master'.
-```console
+
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   nuovofile.txt
 ```
 Si noti il messaggio **Changes to be committed** quindi il nostro file è stato aggiunto ed è pronto per essere inviato server.
 Nell'output sopra riportato ci viene suggerito anche come poter fare per rimuovere il fie dallo stato di *stagging*.
+
 ***NOTA*** per aggiungere più di un file, bisogna specificarli uno per uno separati da uno spazio oppure usare il carattere punto **`git add .`** per aggiungere tutti quelli presenti nella cartella corrente che ancora non sono nella fase di *staging*.
 
 ### Effettuare il commit
@@ -78,14 +80,18 @@ Eseguiamo il comando coi parametri:
 ```bash
 git commit -m "messaggio di commento al commit"
 ```
+Proviamo a fare il nostro primo *commit*
 ```console
 $ git commit -m "Inizio commit"
 [master bc068b2] Inizio commit
  1 file changed, 1 insertion(+)
  create mode 100644 nuovofile.txt
 ```
-In questo caso, essendo un tutorial, è stato messo un messaggio di esempio, ma in realtà il messaggio da mettere dovrebbe essere qualcosa che riguardi il file. 
+In questo caso, essendo un tutorial, è stato messo un messaggio di esempio, ma in realtà il messaggio da mettere dovrebbe essere qualcosa che riguardi il file.
+
 Potrebbe essere l'inizio del progetto come nel esempio o il riferimento a qualche modifica, alla correzione di un bug o di un semplice refuso e così via.
+
 Evitare messaggi privi di senso o incomprensibili, impedirebeb ad altri utenti, ma anche a noi stessi in un secondo momento, di capire il perchè di tale azione.
+
 Inoltre il lavoro fatto verrebbe visto degli altri utenti come molto poco collaborativo e triste.
 Ovviamente è consigliato usare l'inglese per poter rendere comprensibile a più persone possibili ed il messaggio dovrebbe essere il più sintetico possibile, ma comprensibile.
