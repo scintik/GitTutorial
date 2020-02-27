@@ -52,12 +52,13 @@ Dobbiamo quindi preparare l'ambiente gestito da git per eleaborare il nostro fil
 git add nuovofile.txt
 ```
 alla fase di staging (letteralmente staging = messa in scena, ovvero pronto per lo *"spettacolo"* di git).
-Dopo l'esecuzione di **`git add`** potremmo avere dei messaggi uno tipico è la conversione del codice di ritorno a capo a seconda che si sia in ambiente Windows o Linux. Ecco un esempio di output in ambiente Windows dove il fine riga è LF invece di CR+LF.
+
+Dopo l'esecuzione di **`git add`** potremmo avere dei messaggi. Uno tipico è la conversione del codice di ritorno a capo a seconda che si sia in ambiente Windows o Linux. Ecco un esempio di output in ambiente Windows dove il fine riga è LF invece di CR+LF.
 ```console
 warning: LF will be replaced by CRLF in nuovofile.txt.
 The file will have its original line endings in your working directory
 ```
-Lo staging è una fase temporanea da cui devono passare i nuovi file prima di essere elaborati da git, questo perchè potrebbe volere processare solo alcuni file) e altri mantenerli solo nel nostro repository locale come appunti o altro).
+Lo staging è una fase temporanea da cui devono passare i nuovi file prima di essere elaborati da git, questo perchè potrebbe volere processare solo alcuni file) e altri mantenerli solo nella directoryy locale come appunti o altro, ma non come parte del progeto.
 
 Avendo un solo file per il momento il comando **`git add`** avrà preparato quello, quindi riesequendo il comando **`git status`** adesso otterremo:
 ```console
@@ -68,14 +69,14 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   nuovofile.txt
 ```
-Si noti il messaggio **Changes to be committed** quindi il nostro file è stato aggiunto ed è pronto per essere inviato server.
-Nell'output sopra riportato ci viene suggerito anche come poter fare per rimuovere il fie dallo stato di *stagging*.
+Si noti il messaggio **Changes to be committed** quindi il nostro file è stato aggiunto ed è pronto per essere gestito da git.
+Nell'output sopra riportato ci viene suggerito anche come poter fare per rimuovere il file dallo stato di *stagging*.
 
 ***NOTA*** per aggiungere più di un file, bisogna specificarli uno per uno separati da uno spazio oppure usare il carattere punto **`git add .`** per aggiungere tutti quelli presenti nella cartella corrente che ancora non sono nella fase di *staging*.
 
 ### Effettuare il commit
 
-Adesso che il file è pronto, possiamo effettuare il commit ovvero spedirlo al server.
+Adesso che il file è pronto, possiamo effettuare il commit ovvero inserirlo nel **nostro** *repository* locale.
 Eseguiamo il comando coi parametri:
 ```bash
 git commit -m "messaggio di commento al commit"
@@ -95,3 +96,5 @@ Evitare messaggi privi di senso o incomprensibili, impedirebeb ad altri utenti, 
 
 Inoltre il lavoro fatto verrebbe visto degli altri utenti come molto poco collaborativo e triste.
 Ovviamente è consigliato usare l'inglese per poter rendere comprensibile a più persone possibili ed il messaggio dovrebbe essere il più sintetico possibile, ma comprensibile.
+
+***Attenzione*** stiamo sempre lavorando sul nostro repository locale, non abbiamo avuto alcun contatto con il server remoto.
